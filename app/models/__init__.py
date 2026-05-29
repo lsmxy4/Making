@@ -1,6 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from odmantic import AIOEngine
-from app.config import MONGO_DB_NAME, MONGO_URI
+from app.config import MONGO_DB_NAME,MONGO_URL
+
 
 class MongoDB:
     def __init__(self):
@@ -8,7 +9,7 @@ class MongoDB:
         self.engine=None
     
     def connect(self):
-        self.client=AsyncIOMotorClient(MONGO_URI)
+        self.client=AsyncIOMotorClient(MONGO_URL)
         self.engine=AIOEngine(client=self.client, database=MONGO_DB_NAME)
         print("성공적으로 연결 되었습니다.")
 

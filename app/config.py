@@ -31,6 +31,6 @@ def get_secret(
 
 
 MONGO_DB_NAME = get_secret("MONGO_DB_NAME")
-MONGO_URI = get_secret("MONGO_URI")
+MONGO_URL = get_secret("MONGO_URI")
 NAVER_API_SECRET = get_secret("NAVER_API_SECRET")
 NAVER_API_ID = get_secret("NAVER_API_ID")
